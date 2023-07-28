@@ -1,0 +1,18 @@
+.special-offer-header{
+  margin-top: 60px;
+}
+
+.special-offer>span{
+  font-family: "IRANYekan-Bold", serif;
+  font-size: 24px;
+  margin-right: 10px;
+  color: #1D1D1D;
+}
+
+.special-offer-see-more-btn{
+  font-family: "IRANYekan-Medium", serif;
+  font-size: 16px;
+  color: #BBBBBB;
+  border: unset;
+  background-color: unset;
+}

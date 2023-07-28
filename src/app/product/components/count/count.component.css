@@ -1,0 +1,24 @@
+.minus, .add, .delete{
+  width: 45px;
+  height: 36px;
+  border: unset;
+  background-color: #F5F5F5;
+  font-family: "IRANYekan-Bold", serif;
+  font-size: 24px;
+  color: #1D1D1D;
+}
+
+.minus{
+  border-radius: 0 8px 8px 0;
+}
+
+.add{
+  border-radius: 8px 0 0 8px;
+}
+.number{
+  background-color: #FBFBFB;
+  font-family: "IRANYekan-Bold", serif;
+  font-size: 16px;
+  color: #1D1D1D;
+  width: 60%;
+}

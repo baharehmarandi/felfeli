@@ -1,0 +1,11 @@
+<div class="" id="show-mobile-header-drawer-background" (click)="onHideDrawer()">
+  <div class="mobile-header-drawer d-flex flex-column h-100" id="drawer" (click)="$event.stopPropagation()">
+    <img ngSrc="assets/images/logo.png" alt="felfeli logo" height="87" width="150" class="d-flex align-self-center mt-5">
+    <div class="d-flex flex-column">
+      <a class="drawer-items h-100 d-flex align-items-center" *ngFor="let drawerItem of drawerItems">
+        <img src="{{drawerItem.imageSrc}}" alt="{{drawerItem.imageAlt}}" height="18" width="18">
+        <span>{{drawerItem.itemName}}</span>
+      </a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,51 @@
+.product-dropdown-box{
+  width: 100%;
+  height: 491px;
+  top: 103px;
+  right: 0;
+  transition: transform 0.2s ease-in-out;
+  z-index: 1000;
+}
+
+.product-dropdown-box-gradient{
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(#1D1D1D, rgba(29,29,29,41%));
+  border-bottom-left-radius: .75rem;
+  border-bottom-right-radius: .75rem;
+  padding-right: 33px;
+}
+.product-dropdown-box-image{
+  width: 100%;
+  height: 100%;
+  background-image: url("/assets/images/product-image.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border-bottom-left-radius: .75rem;
+  border-bottom-right-radius: .75rem;
+}
+
+.product-category-name{
+  font-family: "IRANYekan-Bold", serif;
+  font-size: 14px;
+  color: white;
+  width: 100%;
+  padding-bottom: 7px;
+  border-bottom: 2px solid #E2F0CB;
+}
+
+.product-dropdown-items{
+  margin-top: 24px;
+  margin-left: 33px;
+}
+
+
+.product-category-items{
+  margin-top: 19px;
+}
+
+.product-category-item{
+  text-decoration: none;
+  color: white;
+  font-size: 13px;
+}

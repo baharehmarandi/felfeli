@@ -1,0 +1,13 @@
+<div *ngIf="showSpecialOffer"
+  class="container special-offer-header d-flex flex-row justify-content-between">
+  <div class="special-offer">
+    <img src="assets/images/discount.png" alt="discount">
+    <span>پیشنهادات ویژه</span>
+  </div>
+  <div class="special-offer-see-more">
+    <button class="special-offer-see-more-btn"
+            (click)="onSpecialOfferSeeMore()">
+      مشاهده همه
+    </button>
+  </div>
+</div>

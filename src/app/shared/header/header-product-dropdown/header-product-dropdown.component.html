@@ -1,0 +1,17 @@
+<div class="product-dropdown-box position-absolute">
+  <div class="product-dropdown-box-image position-absolute">
+    <div class="product-dropdown-box-gradient d-flex flex-row">
+      <div class="product-dropdown-items" *ngFor="let product of products; let i = index">
+        <div class="d-flex flex-column">
+          <img [ngSrc]="productsImages[i]" width="16" height="16" >
+          <span class="product-category-name d-flex">{{product.name}}</span>
+        </div>
+        <div class="product-category-items d-flex flex-column">
+          <a class="product-category-item" routerLink="" *ngFor="let children of product.children">
+            {{children.name}}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

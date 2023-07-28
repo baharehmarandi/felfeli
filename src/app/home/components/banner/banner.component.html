@@ -1,0 +1,10 @@
+<div class="container banner-lists d-flex flex-row flex-wrap">
+  <div class="col-12 col-md-6">
+    <a
+      class="banner d-flex"
+      *ngFor="let banner of bannerLists"
+      [routerLink]="banner.link">
+      <img [src]="environment.baseUrl+banner.image_url" [alt]="banner.title" class="img-fluid">
+    </a>
+  </div>
+</div>

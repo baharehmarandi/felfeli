@@ -1,0 +1,15 @@
+<div class="container product-slider">
+  <div class="d-flex flex-row justify-content-between align-items-center mb-4">
+    <div class="d-flex flex-row">
+      <img [ngSrc]="getImage(product.id)" [alt]="product.name" width="32" height="32">
+      <h3 class="fs-4 fw-bold me-2 mb-0">{{product.name}}</h3>
+    </div>
+    <a href="" class="see-more">مشاهده همه</a>
+  </div>
+  <swiper-container swiper [config]="config" init="false">
+    <swiper-slide
+    *ngFor="let sliderProduct of product.product_from_category">
+      <app-product-card [sliderProductDetails]="sliderProduct"></app-product-card>
+    </swiper-slide>
+  </swiper-container>
+</div>

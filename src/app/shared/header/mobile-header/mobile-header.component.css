@@ -1,0 +1,18 @@
+.mobile-header{
+  margin-top: 17px;
+}
+
+.mobile-header-logo{
+  margin-bottom: 14px;
+}
+
+.hamburger-menu-btn,
+.search-icon-btn,
+.bascket-icon-btn{
+  border: none;
+  background-color: white;
+}
+
+.bascket-icon-btn{
+  margin-right: 26px;
+}

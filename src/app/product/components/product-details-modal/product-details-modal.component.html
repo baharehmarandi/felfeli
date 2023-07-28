@@ -1,0 +1,42 @@
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="product-image d-flex justify-content-center">
+          <img [src]="modalProduct?.image" [alt]="modalProduct?.title" class="w-50">
+        </div>
+        <div class="d-flex justify-content-between">
+          <h3 class="fs-4 fw-bold">{{modalProduct?.title}}</h3>
+          <div>
+            <div class="d-flex justify-content-end" *ngIf="modalProduct?.discount_type!==null">
+              <span class="product-price"><del>{{modalProduct?.price}}</del></span>
+              <span class="badge bg-danger me-2"
+                    *ngIf="modalProduct.discount_type === 'toman'">تومان</span>
+              <span class="badge bg-danger me-2"
+                    *ngIf="modalProduct.discount_type === '%'">{{modalProduct?.discount_value}}%</span>
+            </div>
+            <div class="d-flex flex-row w-100 justify-content-end">
+              <p class="fs-6 fw-bold">{{modalProduct?.current_price| number: '1.0-0'}}</p>
+              <span class="me-1">تومان</span>
+            </div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <span class="category ms-1">دسته بندی:</span>
+          <span class="category-name">{{modalProduct?.categoryName}}</span>
+        </div>
+        <span class="description">{{modalProduct?.description}}</span>
+        <div class="d-flex flex-column flex-md-row mt-3">
+          <app-count class="col-12 col-md-6 me-md-0 me-4 mb-md-0 mb-3"></app-count>
+          <app-add-to-cart class="col-12 col-md-6"></app-add-to-cart>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="" class="product-detail-link">مشاهده جزئیات محصول</a>
+      </div>
+    </div>
+  </div>
+</div>

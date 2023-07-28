@@ -1,0 +1,2 @@
+<app-enter-phone *ngIf="!token"  (onTokenSet)="token=$event" (onPhoneSet)="phone=$event"></app-enter-phone>
+<app-enter-code *ngIf="token" [token]="token" [phone]="phone" (onClearToken)="token=$event"></app-enter-code>

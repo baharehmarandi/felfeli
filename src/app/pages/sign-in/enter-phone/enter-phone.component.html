@@ -1,0 +1,25 @@
+<div class="sign-in-body flex-column">
+  <h3>ورود یا ثبت نام</h3>
+  <form [formGroup]="addPhoneForm" (ngSubmit)="onSubmitPhoneNumber()">
+    <div class="sign-in-input-phoneNumber d-flex justify-content-around align-items-center flex-column">
+      <span>لطفا برای ورود، شماره همراه خود را وارد کنید:</span>
+      <div class="d-flex flex-column justify-content-around">
+        <mat-form-field appearance="outline" color="accent">
+          <input
+            matInput
+            placeholder="برای مثال: 09141234567"
+            formControlName="mobile_phone">
+          <mat-error  *ngIf="addPhoneForm.controls.mobile_phone.status ==='INVALID'">
+            شماره تلفن وارد شده معتبر نیست
+          </mat-error>
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit"
+
+                [ngClass]="addPhoneForm.controls.mobile_phone.status ==='INVALID'? 'mt-2':null">
+          <span style="color: white">ادامه</span>
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+

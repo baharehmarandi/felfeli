@@ -1,0 +1,8 @@
+.show-timer-again-link{
+  border: unset;
+  cursor: pointer;
+  color: #3CB6DC;
+  padding-bottom: 1px;
+  border-bottom: 1px solid #3CB6DC;
+  background-color: unset;
+}

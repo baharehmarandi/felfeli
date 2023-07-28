@@ -1,0 +1,33 @@
+<div class="card d-flex flex-column justify-content-between position-relative"
+     style="width: 18rem;"
+    (mouseenter)="onShowEye()"
+    (mouseleave)="onHideEye()"
+    (click)="showQuickView()">
+  <button
+    *ngIf="showEye"
+    class="showModalImage"
+    data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    <img src="assets/images/Group%203318.png" alt="show modal">
+  </button>
+  <img [src]="sliderProductDetails?.image" class="card-img-top d-flex align-self-center" [alt]="sliderProductDetails.title">
+  <div class="card-body d-flex flex-column justify-content-between">
+    <a href="" class="card-title">{{sliderProductDetails.title}}</a>
+    <div class="card-price">
+      <div class="d-flex justify-content-end" *ngIf="sliderProductDetails.discount_type!==null">
+        <span class="product-price"><del>{{sliderProductDetails.price}}</del></span>
+        <span class="badge bg-danger me-2"
+              *ngIf="sliderProductDetails.discount_type === 'toman'">تومان</span>
+        <span class="badge bg-danger me-2"
+              *ngIf="sliderProductDetails.discount_type === '%'">{{sliderProductDetails.discount_value}}%</span>
+      </div>
+      <div class="d-flex flex-row w-100 justify-content-end">
+        <p>{{sliderProductDetails.current_price| number: '1.0-0'}}</p>
+        <span class="me-1">تومان</span>
+      </div>
+    </div>
+    <app-add-to-cart *ngIf="sliderProductDetails.count !==0 && !showCountBtn"
+                     (showCountBtn)="showCountBtn=$event; showAddToCard = false"></app-add-to-cart>
+    <app-unavailable *ngIf="sliderProductDetails.count ===0"></app-unavailable>
+    <app-count *ngIf="showCountBtn" (addToCardBtn)="showCountBtn=$event"></app-count>
+  </div>
+</div>

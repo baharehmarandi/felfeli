@@ -1,0 +1,8 @@
+<div class="d-flex flex-row" *ngIf="!sendCodeLink">
+  <span class="ms-1">ارسال دوباره کد بعد از</span>
+  <span>{{secondsToDateTime(timerValue) | date: 'mm:ss'}}</span>
+</div>
+
+<button class="show-timer-again-link" type="button"
+   *ngIf="sendCodeLink"
+  (click)="onSendCodeAgainBtn()">ارسال مجدد کد</button>

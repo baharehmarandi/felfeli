@@ -1,0 +1,14 @@
+@font-face {
+  font-family: IRANYekan-Reguler;
+  src: url("fonts/IRANYekanRegularFaNum.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: IRANYekan-Medium;
+  src: url("fonts/IRANYekanMediumFaNum.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: IRANYekan-Bold;
+  src: url("fonts/IRANYekanBoldFaNum.ttf") format("truetype");
+}

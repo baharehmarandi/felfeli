@@ -1,0 +1,101 @@
+@use '@angular/material' as mat;
+@include mat.core();
+
+
+/* For use in src/lib/core/theming/_palette.scss */
+$greenPalette: (
+  50 : #eff6e8,
+  100 : #d8e8c6,
+  200 : #bed9a1,
+  300 : #a3ca7b,
+  400 : #90be5e,
+  500 : #7cb342,
+  600 : #74ac3c,
+  700 : #69a333,
+  800 : #5f9a2b,
+  900 : #4c8b1d,
+  A100 : #dcffc5,
+  A200 : #bdff92,
+  A400 : #9fff5f,
+  A700 : #8fff46,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #000000,
+    600 : #000000,
+    700 : #000000,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+$accentPalette: (
+  50 : #f7f7f7,
+  100 : #ebebeb,
+  200 : #dddddd,
+  300 : #cfcfcf,
+  400 : #c5c5c5,
+  500 : #bbbbbb,
+  600 : #b5b5b5,
+  700 : #acacac,
+  800 : #a4a4a4,
+  900 : #969696,
+  A100 : #ffffff,
+  A200 : #ffffff,
+  A400 : #ffcfcf,
+  A700 : #ffb6b6,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #000000,
+    600 : #000000,
+    700 : #000000,
+    800 : #000000,
+    900 : #000000,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+
+
+
+$material-ui-primary: mat.define-palette($greenPalette);
+$material-ui-accent: mat.define-palette($accentPalette);
+$my-typography: mat.define-typography-config(
+  $font-family: 'IRANYekan-Reguler'
+);
+
+$material-ui-theme: mat.define-light-theme((
+  color: (
+    primary: $material-ui-primary,
+    accent: $material-ui-accent
+  ),
+  typography: $my-typography
+));
+
+@include mat.all-component-themes($material-ui-theme);
+
+.mat-mdc-form-field-error-wrapper{
+  padding: 0!important;
+}
+
+.mat-mdc-raised-button:disabled{
+  background-color: #BBBBBB!important;
+  color: white!important;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: "IRANYekan-Reguler", serif!important; }

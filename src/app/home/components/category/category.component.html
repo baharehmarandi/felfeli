@@ -1,0 +1,13 @@
+<div class="container category">
+  <span>دسته بندی</span>
+  <div class="category-lists">
+    <button class="category-list d-flex flex-column"
+    *ngFor="let category of categoryLists ; let i = index"
+        [ngStyle]="{'background-color': hover[i]? category.color : null}"
+        (mouseenter)="showHover(i)"
+        (mouseleave)="unsetHover(i)">
+      <img [src]="category.image" alt="">
+      <span>{{category.name}}</span>
+    </button>
+  </div>
+</div>

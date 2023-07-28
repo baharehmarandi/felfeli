@@ -1,0 +1,26 @@
+<div class="modal-profile-box d-flex flex-column justify-content-between"
+     (mouseenter)="onClickOutside($event)"
+     *ngIf="showModal">
+  <div class="d-flex flex-row">
+    <img src="assets/images/Group%203739.png" alt="user image">
+    <div class="d-flex flex-column me-2">
+      <span class="user-name">بهاره مرندی</span>
+      <a href="" class="show-account-link">مشاهده حساب کاربری</a>
+    </div>
+  </div>
+  <div class="credit d-flex flex-row justify-content-between align-items-center">
+    <span>اعتبار</span>
+    <span>{{userData.credit}}</span>
+    <button class="add-credit-btn d-flex align-items-center justify-content-center">
+      <img src="assets/images/Group%203457.png" alt="add">
+    </button>
+  </div>
+  <button class="order-list d-flex">
+    <img src="assets/images/order.png" alt="order">
+    <span class="me-2">لیست سفارشات</span>
+  </button>
+  <button class="exit d-flex">
+    <img src="assets/images/Group%20620.png" alt="exit">
+    <span class="me-2">خروج</span>
+  </button>
+</div>

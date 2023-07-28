@@ -1,0 +1,71 @@
+.benefits{
+  height: auto;
+  padding-bottom: 17px;
+  padding-top: 17px;
+}
+
+.text{
+  font-family: "IRANYekan-Medium", serif;
+  font-size: 18px;
+  color: #7CB342;
+}
+
+.card-footer{
+  background-color: #7CB342;
+  border: unset;
+  border-radius: unset;
+  padding: 20px;
+}
+
+.footer-info{
+  background-image: url("/assets/images/footer.f548fe02b1f80fac.jpg");
+}
+
+.card-body{
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+}
+
+.card-text{
+  text-align: justify;
+}
+
+.samandehi, .enamad{
+  width: 147px;
+  height: 175px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.customer, .info, .namads{
+  margin-top: 50px
+}
+
+.arka-link{
+  text-decoration: unset;
+  font-size: 16px;
+  color: #7CB342;
+}
+
+@media (max-width: 992px){
+  .footer-body{
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+
+  .related-links-body{
+    justify-content: unset;
+    align-items: center;
+  }
+}
+
+@media (max-width: 749px){
+  .card-footer{
+    width: 100%;
+  }
+
+  .related-links{
+    align-items: center;
+  }
+}

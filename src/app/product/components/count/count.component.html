@@ -1,0 +1,10 @@
+<div class="count d-flex flex-row">
+  <button class="minus" (click)="onAdd()">+</button>
+  <span class="number d-flex align-self-center justify-content-center">{{productCount}}</span>
+  <button class="add" (click)="onMinus()"
+          *ngIf="productCount!==1">-</button>
+  <button class="delete" *ngIf="productCount === 1"
+          (click)="onDelete()">
+    <img src="assets/images/trash.png" alt="trash">
+  </button>
+</div>

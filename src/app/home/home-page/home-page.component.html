@@ -1,0 +1,9 @@
+<app-slider></app-slider>
+<app-special-offer></app-special-offer>
+<app-category></app-category>
+<app-product-slider *ngIf="mainPageProductLists.length" [product]="mainPageProductLists[0]"></app-product-slider>
+<app-product-slider *ngIf="mainPageProductLists.length" [product]="mainPageProductLists[1]"></app-product-slider>
+<app-banner></app-banner>
+<app-product-slider *ngIf="mainPageProductLists.length" [product]="mainPageProductLists[2]"></app-product-slider>
+<app-product-details-modal></app-product-details-modal>
+<app-download-app></app-download-app>

@@ -1,0 +1,44 @@
+.felfeli-logo{
+  margin-left: 71px;
+}
+
+.header-item{
+  font-family: "IRANYekan-Bold", serif!important;
+  font-size: 16px;
+  color: #263238;
+  text-decoration: none;
+}
+
+.header-item-btn{
+  font-family: "IRANYekan-Bold", serif!important;
+  border: none;
+  background-color: unset;
+}
+
+.dropdown{
+  transition: transform 0.2s ease-in-out;
+}
+
+.dropdown-rotate{
+  transform: rotate(180deg);
+  transition: transform 0.2s ease-in-out;
+}
+
+.header-search-icon,
+.header-profile-icon,
+.header-bascket-icon{
+  border: none;
+  background-color: unset;
+}
+
+.header-profile-icon{
+  margin-left: 70px;
+  margin-right: 70px;
+}
+
+.modal-profile{
+  position: absolute;
+  top: 71px;
+  left: 251px;
+  z-index: 10;
+}

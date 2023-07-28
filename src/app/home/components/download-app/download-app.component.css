@@ -1,0 +1,30 @@
+.download-app{
+  height: auto;
+  background: #7CB342 url("/assets/images/pattern.471ba2e9c47784b5.png");
+  margin-top: 166px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.phone{
+  position: absolute;
+  bottom: -34px;
+  left: 0;
+}
+
+@media (max-width: 1305px) {
+  .phone{
+    position: unset;
+    top: unset;
+    left: unset;
+  }
+}
+
+.app-links{
+  margin-bottom: 57px;
+  margin-top: 57px;
+}
+
+.download-links{
+  margin-top: 78px;
+}

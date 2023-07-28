@@ -1,0 +1,33 @@
+<div class="enter-code-body flex-column">
+  <h3>تایید کد ارسالی</h3>
+  <form [formGroup]="enterCode" (submit)="onSubmitCode()">
+    <div class="sign-in-input-code d-flex justify-content-around align-items-center flex-column">
+      <div class="d-flex flex-column align-items-center">
+        <span>برای ورود، کد 5 رقمی ارسال شده به شماره</span>
+        <div class="d-flex flex-row">
+          <span class="number mt-1">{{phone}}</span>
+          <a
+            [routerLink]="" class="me-2 edit"
+            (click)="onClearPhoneInput()"
+            style="cursor: pointer">
+            ویرایش
+          </a>
+        </div>
+        <span>وارد کنید</span>
+      </div>
+      <div class="d-flex flex-column justify-content-around">
+        <div class="d-flex flex-row">
+          <input class="code-input" maxlength="1" [formControl]="control"
+          *ngFor="let control of enterCode.controls.inputs.controls; let i = index"
+          (keyup)="onKeyUpPress(i-1)" #inputNumbers>
+        </div>
+      </div>
+      <app-count-down-timer
+        [phoneNumber] = 'phone'
+        (token)="token=$event"></app-count-down-timer>
+      <button class="w-100" mat-raised-button color="primary">
+        <span class="text-white">ورود</span>
+      </button>
+    </div>
+  </form>
+</div>
