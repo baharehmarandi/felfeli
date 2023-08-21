@@ -1,6 +1,6 @@
 <swiper-container class="container home-swiper" data-swiper-autoplay="10000" autoplay="true" loop="true">
   <swiper-slide *ngFor="let element of sliderList">
-    <img class="home-swiper-img" [src]=element.image_url [alt]=element.title>
+    <img class="home-swiper-img" [src]="element.image_url" [alt]=element.title>
   </swiper-slide>
 </swiper-container>
 

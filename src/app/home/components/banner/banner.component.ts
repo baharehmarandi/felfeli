@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {HomeService} from "../../home.service";
 import {IBanner, IBannerResponse} from "./banner.interface";
-import {BaseUrl} from "../../../shared/base-url";
+// import {BaseUrl} from "../../../shared/base-url";
 import {environment} from "../../../../environments/environment";
 
 @Component({
@@ -26,6 +26,6 @@ export class BannerComponent implements OnInit{
     })
   }
 
-  protected readonly BaseUrl = BaseUrl;
+  // protected readonly BaseUrl = BaseUrl;
   protected readonly environment = environment;
 }

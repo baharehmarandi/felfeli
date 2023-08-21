@@ -51,10 +51,11 @@ constructor(private authService: AuthService,
 
     this.authService.signIn(data).subscribe((res:IResponse<ISignIn>) => {
       this.LocalStorageService.saveData('userData', res.data);
-      console.log(res.data.api_token)
-      // this.LocalStorageService.saveData('token', res.data.api_token);
+      this.LocalStorageService.saveData('token', res.data.api_token);
       this.router.navigate([""])
     })
+
+    this.authService.isAuthenticated.next(true)
   }
 
    onClearPhoneInput(){

@@ -1,6 +1,6 @@
 import {Injectable, OnInit} from "@angular/core";
 import {HttpClient} from "@angular/common/http";
-import {BaseUrl} from "./base-url";
+import {environment} from "../../environments/environment";
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +14,6 @@ export class ProductService implements OnInit{
   }
 
   getProduct() {
-    return this.Http.get(BaseUrl.apiBaseUrl + 'category?withChild=1')
+    return this.Http.get(environment.baseUrl + 'category?withChild=1')
   }
 }

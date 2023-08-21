@@ -4,7 +4,7 @@
       class="banner d-flex"
       *ngFor="let banner of bannerLists"
       [routerLink]="banner.link">
-      <img [src]="environment.baseUrl+banner.image_url" [alt]="banner.title" class="img-fluid">
+      <img [src]="environment.imageBaseUrl+banner.image_url" [alt]="banner.title" class="img-fluid">
     </a>
   </div>
 </div>

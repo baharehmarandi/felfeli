@@ -7,7 +7,7 @@
         (mouseenter)="showHover(i)"
         (mouseleave)="unsetHover(i)">
       <img [src]="category.image" alt="">
-      <span>{{category.name}}</span>
+      <span>{{category?.name}}</span>
     </button>
   </div>
 </div>

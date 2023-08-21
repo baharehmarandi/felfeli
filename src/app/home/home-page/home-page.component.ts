@@ -26,7 +26,7 @@ export class HomePageComponent implements OnInit{
       this.mainPageProductLists = res.data
       this.mainPageProductLists.map((productList: IMainPage) => {
         productList.product_from_category.map((productCategory: IProductCard) => {
-          productCategory.image = environment.baseUrl + productCategory.image
+          productCategory.image = environment.imageBaseUrl + productCategory.image
         })
       })
     })

@@ -1,21 +1,30 @@
-import {Component} from '@angular/core';
-import {LocalStorageService} from "../local-storage.service";
+import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {ModalProfileService} from "../../modal-profile.service";
+import {AuthService} from "../../pages/sign-in/auth.service";
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
   showProfileModal = false;
   showProductDropdown = false;
   dropdownRotate = false;
+  showProfileDropdown = false;
 
-  constructor(private localStorage: LocalStorageService,
-              private router: Router,
-              private modalProfileService: ModalProfileService) {
+  isAuthenticated = false;
+
+  constructor(private router: Router,
+              private modalProfileService: ModalProfileService,
+              private authService: AuthService) {
+  }
+
+  ngOnInit() {
+  this.authService.isAuthenticated.subscribe(value => {
+    this.isAuthenticated = value;
+  })
   }
 
   onShowProductDropdown() {
@@ -27,13 +36,6 @@ export class HeaderComponent {
     this.showProfileModal = true;
     this.modalProfileService.openModal();
   }
-
-  // openModal() {
-  //   this.modalProfileService.openModal();
-  // }
-  // onMouseLeave(){
-  //   this.showProfileModal = false;
-  // }
 
   onClickProfile(){
     if(localStorage.getItem("userData")){

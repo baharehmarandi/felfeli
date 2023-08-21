@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {IShoppingCardDto, IShoppingCardList} from "./shopping-card.interface";
-import {BaseUrl} from "../shared/base-url";
 import {IResponseList} from "../shared/model/responseList.interface";
+import {environment} from "../../environments/environment";
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +17,7 @@ export class ShoppingCardService {
   }
 
   postShoppingCard(data: IShoppingCardDto): Observable<IResponseList<IShoppingCardList>> {
-    return this.http.post<IResponseList<IShoppingCardList>>(BaseUrl.apiBaseUrl + 'cart', data, {
+    return this.http.post<IResponseList<IShoppingCardList>>(environment.baseUrl + 'cart', data, {
       headers: {
         Authorization: localStorage.getItem('token')
       },
